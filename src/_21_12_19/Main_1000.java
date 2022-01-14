@@ -1,14 +1,16 @@
 package _21_12_19;
 
-import java.util.Scanner;
+
+import java.io.IOException;
 
 public class Main_1000 {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-        int A = scanner.nextInt();
-        int B = scanner.nextInt();
+        int A = System.in.read() - 48;
+        System.in.read();
+        int B = System.in.read() - 48;
 
-        System.out.println(A+B);
+        System.out.print(A+B);
+
     }
 }
