@@ -1,12 +1,14 @@
 package _21_12_22;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main_2753 {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int years = scanner.nextInt();
+        int years = Integer.parseInt(br.readLine());
 
         if ( years % 4 == 0 ){
             if ( years % 100 != 0 || years % 400 == 0 )

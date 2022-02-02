@@ -1,21 +1,20 @@
 package _21_12_19;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main_2588 {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int A = scanner.nextInt();
-        int B = scanner.nextInt();
+        int A = Integer.parseInt(br.readLine());
+        String B = br.readLine();
 
-        String number = String.valueOf(B);
-        char[] digit = number.toCharArray();
+        System.out.println(A * (B.charAt(2)-'0'));
+        System.out.println(A * (B.charAt(1)-'0'));
+        System.out.println(A * (B.charAt(0)-'0'));
+        System.out.println(A * Integer.parseInt(B));
 
-        for(int i = digit.length-1; i >= 0; i--) {
-            System.out.println(A*(digit[i]-'0'));
-            // digit[i] 는 char 형이기 때문에 아스키코드가 아닌 int 형으로 형변환을 해서 계산을 해주어야함.
-        }
-        System.out.println(A*B);
     }
 }
